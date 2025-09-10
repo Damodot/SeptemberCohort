@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="userInput">
+    <button onclick="checkUserInput()">Check User Input</button>
+    <h1 id="userFullName"></h1>
+</body>
+
+</html>
+<script>
+    function checkUserInput() {
+        let userInput = document.getElementById('userInput')
+        console.log(userInput.value);
+        console.log(typeof userInput.value);
+        let userFullName = document.getElementById('userFullName')
+        userFullName.innerHTML = userInput.value
+    }
+
+    // String Methods
+    let aSentence = 'this class is going to be  so much  fun, dey with me'
+
+    // Length give you back a number
+    let myString = 'Javascript  '
+    let trimmedText = myString.trim()
+    console.log(trimmedText);
+
+    console.log(myString.length);
+
+    // accessing last character in a string
+    // console.log(myString[0]);
+    console.log(myString.trim()[myString.trim().length - 1]);
+
+    // Includes gives you back a boolean
+    let incString = 'Todays Class'
+    console.log(incString.includes('shit'));
+
+    // toLowerCase
+    let userText = 'fUcK sHit hEll shit'
+    console.log(userText.toLowerCase().includes('shit'));
+
+    // toUpperCase
+    console.log(userText.toUpperCase().includes('SHIT'));
+
+    // replace & replaceAll
+    let hashedOutText = userText.toLowerCase().replaceAll("shit", "s**t")
+    console.log(hashedOutText);
+
+    // Concatination
+    let firstName = 'adedeji'
+    let replcedFirstName = firstName.replace(firstName[0], firstName[0].toUpperCase())
+    console.log(replcedFirstName);
+    let lastName = 'adedotun'
+    let replcedLastName = lastName.replace(lastName[0], lastName[0].toUpperCase())
+    console.log(replcedLastName);
+
+    let fullName = replcedFirstName.concat(" ", replcedLastName)
+    console.log(fullName);
+
+    console.log(firstName + ' ' + lastName);
+    
+
+    // Declare a variable firstName and Lastname
+    // Using concatinaton add the two names together
+    // Display the name on the webpage, in title case
+
+    // trim to remove all white space in front or at the back of a string
+    let newMessage = "                How far my guy            "
+    let trimmedMessage = newMessage.trim()
+    console.log(newMessage);
+    console.log(trimmedMessage);
+
+    // Slice
+    let sliceExample = 'Did you guys eat before coming?'
+    let slicedText = sliceExample.slice(4)
+    console.log(slicedText);
+
+    // Split
+    let splitExample = 'Hello Guys? Are you feeling good today?'
+    let splittedText = splitExample.split("")
+    console.log(splittedText);
+
+    // Interpolation
+    let firstName2 = 'Adedeji'
+
+    let course = 'Javascript'
+
+    let sentence = `My name is ${firstName2}, and i teach ${course}`
+
+    console.log(sentence);
+
+    // let whiteSpace = ' '
+    // let emptySpace = ''
+
+</script>

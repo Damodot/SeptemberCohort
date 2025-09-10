@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <h1 id="h1Tag"></h1>
+    <h1 id="dispName"></h1>
+</body>
+
+</html>
+
+<script>
+
+    let num2 = 10
+
+    num2 = 40
+
+
+    // Numbers
+
+    let num = "12"
+    let realNum = parseInt(num)
+    let realNum2 = Number(num)
+    let realNum3 = +num
+
+    let newNum = "Hello"
+
+    // parseInt, Number, + sign
+    console.log(typeof parseInt(num));
+
+    console.log(typeof num);
+    console.log(num);
+
+    console.log(parseInt(newNum));
+
+
+    // Math Object
+    let PI = 3.12573736228928
+
+    // Math.round
+    console.log(Math.round(3.71616));
+
+    // Math.ceil round off to the highest whole number possible
+    console.log(Math.ceil(3.1234));
+
+    // Math.floor rounds of to the lowest whole number possible
+    console.log(Math.floor(3.99999));
+
+    // Math.min
+    console.log(Math.min(3, 4, 6, 1, 8, 9, 3, 2, 5, 6, 7, 8));
+
+    // Math.max
+    console.log(Math.max(3, 4, 6, 1, 8, 9, 3, 2, 5, 6, 7, 8));
+
+    // Math.random
+    console.log(Math.random());
+
+    console.log(Math.round(Math.random() * 10)); // 0.0000111111
+
+    console.log(Math.floor(Math.random() * 101));
+
+    let min = 100
+    let max = 200
+
+
+    //101 * 0.01111 = 0.9997
+    console.log(Math.floor(Math.random() * (max + 1 - min)) + min);
+
+
+    console.log(Math.floor(Math.random() * 11) + 5); //from 0.0111 to 0.999
+
+    // Assignment Operator = += /= *=
+    let myName = 'Dotun'
+
+    let a = 10
+
+    a = a + 30
+
+    a /= 2
+
+    a *= 2
+
+    console.log(a);
+
+    let b = 30
+
+    b = 70
+
+    let h1Tag = document.getElementById('h1Tag')
+    h1Tag.innerHTML += 'Hello Everybody'
+    h1Tag.innerHTML += 'How are you guys doing?'
+
+
+    let firstName = 'Name'
+    let secName = 'SecName'
+
+    console.log(firstName + secName)
+
+    // Assignment Operator
+    // Arithmetic Operator
+    // Increment & Decrement Operator
+    // Comparison Operator
+    // Logical Operator
+    // Tenary Operator
+    // Truthy and falsy Values
+
+    // Assignment Operator
+    // = works for any data type
+    // += works for numbers and strings
+    // /=, *=, -= works for numbers alone
+    let className = 'Javascript'
+
+    let num1 = 10
+
+    num1 = num1 + 40
+
+    let dispName = document.getElementById('dispName')
+    dispName.innerHTML += 'How are you guys doing?'
+
+    let num3 = 30
+
+    num3 /= 10
+
+    console.log('Ayomide' + 'Evans');
+
+    // Arithmetic Operators
+    // -, +, *, /, %
+
+    let num4 = 5
+    let num5 = 3
+
+    console.log(num4 - num5);
+    console.log(num4 + num5);
+    console.log(num4 / num5);
+    console.log(num4 * num5);
+    console.log(num4 % num5);
+
+    // Increment & Decrement Operator
+    // Post Increment
+    let index = 0
+    console.log(index++);
+    console.log(index);
+    console.log(index++);
+    console.log(index);
+
+    // Pre Increment
+    let ind = 0
+    console.log(++ind);
+    console.log(ind);
+
+    // Decrement
+    // Post Decrement
+    let int = 2
+    console.log(int--);
+    console.log(int);
+
+    // Pre Decrement
+    let int1 = 2
+    console.log(--int1);
+    console.log(int1);
+
+    // Comparison Operator
+    let bool = 4 > 4 //numbers
+    let bool2 = 4 >= 4 //numbers
+    let bool3 = 4 < 4 //numbers
+    let bool4 = 4 <= 4 //numbers
+    let bool5 = 4 == "4" //strings, numbers
+    let bool6 = 4 === "4" //strings, numbers  
+    let bool7 = 4 != '4'  //strings, numbers
+    let bool8 = 4 !== 4 //strings, numbers
+
+    let myName4 = "Javascript"
+
+    console.log(myName4 === "Javascript");
+
+
+
+
+    console.log(Number(true));
+    console.log(true == 1);
+    console.log(bool5);
+    console.log(bool6);
+    console.log(bool7);
+    console.log(bool8);
+
+    // Logical Operator
+    // OR Operator 
+    let logOpe = false || false || false
+
+    let aString = 'Javascript is so fun'
+
+    console.log(4 !== '4' || '' == 0);
+    console.log(NaN === NaN || '' === 0);
+    console.log(aString.toUpperCase().includes('Java') || 1 !== true);
+
+
+    let aNum = 30
+    let bNum = 20
+
+    console.log(bNum * aNum);
+    console.log(2 + aNum);
+
+    // AND Operator
+    let andOpe = true && true && false
+
+    console.log(4 !== '4' && '' == 0);
+    console.log(NaN !== NaN && 1 !== true && NaN == NaN);
+    console.log(aString.toUpperCase().includes('Java') && 1 !== true);
+
+
+    // true && true && false
+    // userName === "" || email === "" || password === ''
+
+    // Truthy Value
+    // All strings that has a value in them
+    // All numbers except 0
+    // The boolean true itself
+
+    // Falsy Values
+    // An empty string
+    // The number 0
+    // The boolean false itself
+    // undefined
+    // null
+
+    // Tenary Operator
+    let itsNotRaining = aString.toUpperCase().includes('Java') && !(1 !== true)
+    let isRaining = ''
+    isRaining ?
+        console.log('You need a rain coat') :
+        console.log('You do not need a rain coat')
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

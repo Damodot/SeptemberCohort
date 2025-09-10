@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="introduction.css">
+    <script src="introsuction.js" defer></script>
+</head>
+
+<body>
+    <div id="newDiv"></div>
+    <h1 id="sayHello"></h1>
+    <div id="nameDiv"></div>
+
+    <h1 id="showName">Adedotun</h1>
+
+    <!-- <h1>Hello</h1> -->
+
+</body>
+
+</html>
+
+<script>
+    let userName = ' Ayomide'
+    const welcomeUser = document.getElementById('sayHello')
+    welcomeUser.innerHTML = 'Welcome Ayomide'
+
+    const nameDiv = document.getElementById('nameDiv')
+    nameDiv.innerHTML = `
+        <Section>
+            <div></div>
+        </Section>
+    `
+
+    // Create a variable and assign your name to it
+    // Create an h1 tag in your Dom
+    // Grab the h1 tag in Javascript
+    // Send your name into the innerHTML of that h1 tag
+
+    let myName2 = "Dotun"
+    let showName = document.getElementById('showName')
+    console.log(showName.innerHTML)
+    showName.innerHTML = myName2
+    console.log(showName.innerHTML)
+
+    const divFromDom = document.getElementById('newDiv')
+    divFromDom.style.width = '100px'
+    divFromDom.style.height = '100px'
+    divFromDom.style.backgroundColor = 'red'
+
+    console.log("Welcome to JS Class");
+    console.log
+        ("This is going to be fun");
+
+
+    // let const var
+    // Let keyword allows you to create a variable and reassign another data to that variable
+    // Let and Var work the same way
+    let welcome = "Greeting to you guys"
+    console.log(welcome);
+
+    let currentCourse = 'Javascript'
+    console.log(currentCourse);
+
+    currentCourse = "React JS"
+    console.log(currentCourse);
+
+    // Var
+    var myName = 'Dotun'
+    console.log(myName);
+
+    myName = 'Deji'
+    console.log(myName);
+
+    // Const
+    const boilingPoint = '100'
+    console.log(boilingPoint);
+
+    // boilingPoint = '200'
+    // console.log(boilingPoint);
+
+
+
+
+</script>
