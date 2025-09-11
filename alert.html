@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    // Window Alert Methods
+    // Alert to give users messages
+    // alert('Welcome to Javascript')
+
+    // Confirm to get confirmation about a delicate action
+    // let confirmer = confirm('Are you sure you want to delete this page?')
+    // console.log(confirmer);
+    
+    // if (confirmer) {
+    //     alert('Your account has been deleted')
+    // }
+
+
+    // Prompt to get input from users
+    let previousUserName = 'Adedeji'
+    let promptReturn = prompt('Edit your username?', previousUserName)
+    console.log(promptReturn);
+
+    if (promptReturn === previousUserName || !promptReturn) {
+        alert('Please edit your username')
+    } else {
+        alert(`Your username is ${promptReturn} it has been updated succesfully`)
+    }
+    
+</script>
