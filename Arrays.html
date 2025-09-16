@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // let student1 = 'Evans'
+    // let student2 = 'AY'
+
+    let arr = new Array("Evans", 'AY', 'Alpha', 'Runold')
+    let arr2 = ["Evans", 'AY', 'Alpha', 'Runold']
+    console.log(arr);
+
+
+    let newArr = [true, false, false, true]
+    let anArr = [{}, {}, {}]
+    let arrOfArr = [[1, 2, 3], [4, 5, 5, [6]], [7, 4, 8, 9]]
+    console.log(arrOfArr[0][1]);
+    console.log(arrOfArr[1][2][0]);
+    let breakDown = arrOfArr[arrOfArr.length - 1]
+    // breakDown = [7,4,8,9]
+    console.log(breakDown[breakDown.length - 1]);
+
+    console.log(arrOfArr[1][arrOfArr[1].length - 1][0]);
+    console.log(arrOfArr[2][2]);
+    // last element inside last element
+    console.log(arrOfArr[arrOfArr.length - 1][arrOfArr[arrOfArr.length - 1].length - 1]);
+
+
+    // arrOfArr[arrOfArr.length - 1] = [7, 4, 8, 9]
+    // brokenDown = [7,4,8,9]
+    // brokenDown[brokenDown ]
+
+
+
+    // let brokenDownArr = [1, 2, 3]
+
+
+    // Primitive datas, non mutable, cant change indidvidual elements
+    let newString = 'Javascript'
+    console.log(newString[0]);
+    console.log(newString[1]);
+    newString[0] = 'Y'
+    newString = 'Yavascript'
+    console.log(newString);
+
+    newString[newString.length - 1]
+
+
+
+
+    let numArr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    console.log(numArr2[0]);
+    console.log(numArr2[1]);
+
+    numArr2[1] = 20
+
+    // numArr2.length - 1
+    numArr2[numArr2.length - 1] = 90
+    console.log(numArr2);
+
+    let stringArr = ['January', 'February', 'March']
+
+    stringArr[0] = 1
+    console.log(stringArr);
+
+    let nameArr = [1, 2, ['AY', ['Mercy', ['Runold'], ['Evans'], ['Alpha']]]]
+
+    let name2 = [1, 2, ['Mathew', ['Femi', ['Federick'], ['Oba'], ['Amos']]]]
+
+    let name3 = [1, 2, ['Posi', ['Abbey', ['Ola']]]]
+
+
+
+
+
+
+
+
+</script>
