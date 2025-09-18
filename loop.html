@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="showNames">
+
+    </div>
+</body>
+
+</html>
+<script>
+
+    // let showNames = document.getElementById('showNames')
+    // showNames.innerHTML = `<h1>${newArray[0]}</h1>`
+    // showNames.innerHTML += `<h1>${newArray[1]}</h1>`
+    // showNames.innerHTML += `<h1>${newArray[2]}</h1>`
+    // showNames.innerHTML += `<h1>${newArray[3]}</h1>`
+    // showNames.innerHTML += `<h1>${newArray[4]}</h1>`
+
+    for (let index = 0; index < 5; index++) {
+        console.log(index);
+    }
+
+    for (let index = 1; index < 13; index++) {
+        console.log(`2 * ${index} = ${2 * index}`);
+    }
+
+    // #
+    // ##
+    // ###
+    // ####
+    // #####
+
+    let hash = ''
+    for (let index = 0; index < 5; index++) {
+        hash = '#'
+        console.log(hash)
+    }
+
+    // 0 * 0 = 0
+    // 1 * 1 = 1
+    // 2 * 2 = 4
+    // 3 * 3 = 9
+    // 4 * 4 = 16
+    // 5 * 5 = 25
+
+    for (let i = 6; i > 0; i--) {
+        console.log(`${i} * ${i} = ${i * i}`);
+    }
+
+
+
+
+    let newArray = ['AY', 'Evans', 'MercyOne', 'MercyTwo', 'Federick']
+    let foundUser
+    for (let i = 0; i < newArray.length; i++) {
+        const element = newArray[i];
+        if (element.toLowerCase() === 'mercyone') {
+            foundUser = element
+            break
+        }
+    }
+    if (foundUser) {
+        alert('Login Successful')
+    } else {
+        alert('User Not Found')
+    }
+
+
+    for (let int = 0; int < newArray.length; int++) {
+        const element = newArray[int];
+        console.log(element);
+        showNames.innerHTML += `<h1>${element}</h1>`
+    }
+
+    for (const iterator of newArray) {
+        console.log(iterator);
+        showNames.innerHTML += `<h1>${iterator}</h1>`
+    }
+
+
+    // break Continue
+
+    for (let i = 0; i < 5; i++) {
+        if (i === 3) {
+            break
+        }
+        console.log(i);
+    }
+
+</script>
