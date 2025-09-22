@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="text" type="text">
+    <input id="text2" type="text">
+
+    <button onclick="checkMultiply()">click</button>
+    <div id="output">multipliction table</div>
+</body>
+
+</html>
+<script>
+    function checkMultiply() {
+        let text = document.getElementById('text').value.trim()
+        let text2 = document.getElementById('text2').value.trim()
+        let output = document.getElementById('output')
+
+        // text = ''
+        // when the user does not type anything in the input
+        if (!text || !text2) {
+            window.alert('All field are mandatory')
+        } else if (!+text || !+text2) {
+            window.alert('You need to input a number')
+        } else {
+            console.log(+text)
+            console.log(+text2)
+            console.log("hello");
+
+            for (let index = 1; index <= 12; index++) {
+                console.log(`${text} * ${index} = ${+text * index}`);
+                output.innerHTML += `<h1>${text} * ${index} = ${+text * index}</h1>`
+            }
+
+        }
+
+
+
+
+
+
+    }
+</script>
