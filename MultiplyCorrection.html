@@ -12,7 +12,7 @@
     <input id="text2" type="text">
 
     <button onclick="checkMultiply()">click</button>
-    <div id="output">multipliction table</div>
+    <div id="output"></div>
 </body>
 
 </html>
@@ -27,23 +27,37 @@
         if (!text || !text2) {
             window.alert('All field are mandatory')
         } else if (!+text || !+text2) {
-            window.alert('You need to input a number')
+            window.alert('You need to input a number from 1 above')
         } else {
             console.log(+text)
             console.log(+text2)
-            console.log("hello");
+            //-
+            // text = 3
+            // text2 = 5
+            output.innerHTML = ''
 
-            for (let index = 1; index <= 12; index++) {
-                console.log(`${text} * ${index} = ${+text * index}`);
-                output.innerHTML += `<h1>${text} * ${index} = ${+text * index}</h1>`
+            if (+text2 > +text) {
+                for (let int = +text; int <= +text2; int++) {
+                    console.log(int);
+                    output.innerHTML += `<h6>${int} Times Multiplication Table</h6>`
+                    for (let index = 1; index <= 12; index++) {
+                        console.log(`${int} * ${index} = ${+int * index}`);
+                        output.innerHTML += `<span>${int} * ${index} = ${+int * index}</span><br>`
+                    }
+                }
+            } else {
+                for (let int = +text; int >= +text2; int--) {
+                    console.log(int);
+                    output.innerHTML += `<h6>${int} Times Multiplication Table</h6>`
+                    for (let index = 1; index <= 12; index++) {
+                        console.log(`${int} * ${index} = ${+int * index}`);
+                        output.innerHTML += `<span>${int} * ${index} = ${+int * index}</span><br>`
+                    }
+                }
             }
-
         }
-
-
-
-
-
-
     }
+
+
+
 </script>

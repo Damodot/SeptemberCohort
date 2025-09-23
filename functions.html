@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="clickMe()">Click Me</button>
+    <button onclick="sayName2()">Click Me 2</button>
+</body>
+
+</html>
+
+<script>
+    // Global Scope, Local Scope: 
+    // Local  is Function Scope and Block Scope
+
+    // Any variable created in the global scope is available in every other scope
+
+
+    console.log('Hello');
+    let thisClass = 'Javascript'
+    console.log(thisClass);
+
+    let sentence = 'I have said your name'
+
+    function clickMe() {
+        thisClass = 'React'
+        console.log('Button CLicked');
+        console.log(thisClass);
+        let newClass = 'React'
+        console.log(newClass);
+        function sayName() {
+            console.log(sentence);
+        }
+        sayName()
+    }
+    
+    // clickMe()
+    console.log(thisClass);
+    
+    function sayName2() {
+        console.log(thisClass);
+        
+    }
+    
+
+    let num = [1, 2, 3, 4, 5, 6, 7, 8]
+
+    // console.log(eval(num.join('+')));
+    // x + 1 = 1
+
+    let sum = 0
+    for (let index = 0; index < num.length; index++) {
+        const element = num[index]  
+        sum += element      
+    }
+    console.log(sum);
+
+
+    function newFunction() {
+        let myName = 'Dotun'
+        var myName2 = 'Dotun'
+        const myName3 = 'Dotun'
+    }
+    newFunction()
+    // console.log(myName);
+    // console.log(myName2);
+    // console.log(myName3);
+
+
+    for (let index = 0; index < 1; index++) {
+        const element = 'Hello'
+        let element2 = 'Hello'
+        var element3 = 'Hi Guys'
+    }
+    // console.log(element);
+    // console.log(element2);
+    console.log(element3);
+    
+    
+
+
+
+
+
+
+</script>
