@@ -18,6 +18,8 @@
 </html>
 <script>
     function checkMultiply() {
+        console.log('Hello');
+
         let text = document.getElementById('text').value.trim()
         let text2 = document.getElementById('text2').value.trim()
         let output = document.getElementById('output')
@@ -37,23 +39,39 @@
             output.innerHTML = ''
 
             if (+text2 > +text) {
-                for (let int = +text; int <= +text2; int++) {
-                    console.log(int);
-                    output.innerHTML += `<h6>${int} Times Multiplication Table</h6>`
-                    for (let index = 1; index <= 12; index++) {
-                        console.log(`${int} * ${index} = ${+int * index}`);
-                        output.innerHTML += `<span>${int} * ${index} = ${+int * index}</span><br>`
-                    }
-                }
-            } else {
-                for (let int = +text; int >= +text2; int--) {
-                    console.log(int);
-                    output.innerHTML += `<h6>${int} Times Multiplication Table</h6>`
-                    for (let index = 1; index <= 12; index++) {
-                        console.log(`${int} * ${index} = ${+int * index}`);
-                        output.innerHTML += `<span>${int} * ${index} = ${+int * index}</span><br>`
-                    }
-                }
+                loopMultiply('<', '++')
+                // for (let int = +text; int <= +text2; int++) {
+                    //     console.log(int);
+                    //     output.innerHTML += `<h6>${int} Times Multiplication Table</h6>`
+                    //     for (let index = 1; index <= 12; index++) {
+                        //         console.log(`${int} * ${index} = ${+int * index}`);
+                        //         output.innerHTML += `<span>${int} * ${index} = ${+int * index}</span><br>`
+                        //     }
+                        // }
+                    } else {
+                loopMultiply('>', '--')
+                // for (let int = +text; int >= +text2; int--) {
+                //     console.log(int);
+                //     output.innerHTML += `<h6>${int} Times Multiplication Table</h6>`
+                //     for (let index = 1; index <= 12; index++) {
+                //         console.log(`${int} * ${index} = ${+int * index}`);
+                //         output.innerHTML += `<span>${int} * ${index} = ${+int * index}</span><br>`
+                //     }
+                // }
+            }
+        }
+    }
+
+    function loopMultiply(params, params2) {
+        console.log(params);
+        console.log(params2);
+
+        for (let int = +text; params === '<' ? int <= +text2 : int >= +text2; params2 === "++" ? int++ : int-- ) {
+            console.log(int);
+            output.innerHTML += `<h6>${int} Times Multiplication Table</h6>`
+            for (let index = 1; index <= 12; index++) {
+                console.log(`${int} * ${index} = ${+int * index}`);
+                output.innerHTML += `<span>${int} * ${index} = ${+int * index}</span><br>`
             }
         }
     }

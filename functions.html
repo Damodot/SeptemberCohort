@@ -38,15 +38,15 @@
         }
         sayName()
     }
-    
+
     // clickMe()
     console.log(thisClass);
-    
+
     function sayName2() {
         console.log(thisClass);
-        
+
     }
-    
+
 
     let num = [1, 2, 3, 4, 5, 6, 7, 8]
 
@@ -55,8 +55,8 @@
 
     let sum = 0
     for (let index = 0; index < num.length; index++) {
-        const element = num[index]  
-        sum += element      
+        const element = num[index]
+        sum += element
     }
     console.log(sum);
 
@@ -80,11 +80,106 @@
     // console.log(element);
     // console.log(element2);
     console.log(element3);
-    
-    
+
+
+    // Types of Functions
+    // Function Declaration
+    // Function Expression
+    // Arrow Function
+    // Self Invoking Function Expression
+    // Function with a parameter
+    // Function Returning a value
+    // Callback Functions
+    // Anonymous Function
+
+    // Function Declaration
+    function sayHello() {
+        console.log('I am a function Declaration');
+    }
+
+    function callSayHello() {
+        sayHello();
+    };
+    callSayHello()
+
+    // Anonymous Function / Function Expression
+    let anonymousFunction = function () {
+        console.log('I am an anonymous function');
+    }
+
+    anonymousFunction();
+
+    // Self Invoking Function Expression
+    (function () {
+        console.log('I am an SIFE function');
+    })();
+
+
+    // Arrow Function
+    let arrowFunc = () => {
+        console.log('This is an arrow Function');
+    }
+
+    arrowFunc()
+
+    // Functions with a parameter
+    function sayName(params) {
+        console.log(`My name is ${params}`);
+    }
+
+    sayName('Dotun')
+
+
+    let arr = [1, 2, 3, 4, 5, 6, 7]
+    let arr2 = [7, 8, 9, 10, 11, 12, 13, 14]
+
+    console.log(arr.join('+'));
+
+    console.log(eval(arr.join('+')));
 
 
 
+
+    function reverseArr(params) {
+        params.reverse()
+        console.log(params);
+    }
+
+    reverseArr(arr)
+    reverseArr(arr2)
+
+    function sumArr(params) {
+        console.log(eval(params.join('+')));
+    }
+
+    sumArr(arr)
+    sumArr(arr2)
+
+    // functions with 2 parameters
+    function sayParams(a, b) {
+        console.log(a, b);
+    }
+
+    sayParams('Dotun', 'Deji')
+
+    function addNum(a, b) {
+        console.log(a + b);
+    }
+
+    addNum(4, 7)
+
+    // Funtions with many parameters
+
+    function showAllNum() {
+        console.log(arguments);
+        let coppiedArr = Array.from(arguments)
+        // for (let index = 0; index < arguments.length; index++) {
+        //     const element = arguments[index];
+        //     coppiedArr.push(element)
+        // }
+        console.log(coppiedArr);
+    }
+    showAllNum(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 10, 13, 15, 13, 4, 5, 6)
 
 
 
