@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div,
+        #h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: rgb(255, 255, 255);
+        }
+
+        /* #h1 {
+            width: 50%;
+            text-align: center;
+            background-color: rgb(45, 2, 8);
+        } */
+    </style>
+</head>
+
+<body>
+
+    <div id="div">
+        <h1 id="h1">
+            <h1 style="margin-bottom: 10px;"> CONTINOUS ASSESSMENT </h1>
+            <hi style="text-align: center; margin-bottom: 20px; width: 60%;">
+                <!-- Exercise 1
+                <br>
+
+                'Love is the best thing in this world. Some found their love and some are still looking for their love.'
+                <br />
+             *   At what indexes did love appear first and last in the sentence, console log both.
+                <br />
+             *   Count the number of word love in this sentence.
+                <br /> -->
+
+                <br>
+
+                Exercise 3
+                <br>
+                Display everything in your array on the web page when the same button has been clicked on
+                <br>
+                (3 Marks)
+
+
+                <br>
+
+                <br />
+                <br />
+            </hi>
+
+            <i id="protip" style="padding-bottom: 10px; margin-bottom: 10px;">pro tip: (
+                Use a loop ) </i>
+        </h1>
+
+        <!-- <input id="input">
+<button onclick="papjskd()"> push</button>
+<button onclick="pop()"> pop</button> -->
+
+    </div>
+
+
+</body>
+
+</html>
+<script>
+
+    // document.body.style.backgroundColor = 'white'
+    // function change() {
+    //     document.body.style.backgroundColor === 'white' ? document.body.style.backgroundColor = 'black' : document.body.style.backgroundColor = 'white'
+
+    // }
+
+    // emptyArr = ['Hello', 'How are you doing']
+    // for (let index kdkdjddkk) {
+        // const element =  arr[index
+        // ou.innerHTML = element
+    //  }
+
+
+    // let array = []
+    // console.log(array);
+    // let arr = new Array()
+    // console.log(arr);
+
+    // let arr1 = ['dave', 45, undefined, null, {}]
+
+    // console.log(arr1.length);
+
+
+    // console.log(arr1[2]);
+
+    // arr1[2] = 'jessica'
+    // console.log(arr1);
+
+    // arr1[3] = 'tope'
+    // console.log(arr1);
+
+    // arr1[arr1.length - 1]
+
+    // console.log(typeof (arr1));
+
+    // console.log(Array.isArray(arr1[2]));
+
+
+    // let newArr = Array(7).fill('a')
+    // console.log(newArr);
+
+
+    // let nums = [1, 2, 3, 4]
+    // let letters = ['a', 'b', 'c', 'd']
+    // let newArray = letters.concat(nums)
+    // console.log(newArray);
+
+    // console.log(newArray.indexOf(2));
+
+
+    // let webTechs = [
+    //     'HTML',
+    //     'CSS',
+    //     'JavaScript'
+    // ]
+
+    // webTechs[2] = webTechs[2].toUpperCase()
+
+    // console.log(webTechs);
+
+
+    // let countries = ['Albania', 'Bolivia', 'Canada', 'Ethiopia', 'Denmark', 'Finland', 'Germany', 'Hungary', 'Ireland', 'Japan', 'Kenya']
+
+    // if (countries.indexOf('Ethiopia') == -1) {
+    //     countries.push('Ethiopia')
+    //     console.log(countries);
+    // } else {
+    //     console.log('Ethiopia'.toLocaleUpperCase());
+    // }
+
+    // let num = 54
+    // num = String(num)
+
+    // let string = '67 8'
+    // countries =  countries.toString()
+
+    // console.log(typeof countries.toString());
+    // console.log(countries);
+
+
+    // console.log(string.split('')); //substr substring slice
+    //slice
+
+    // let numbers = []
+    // ['hey', 'sup', 'whatsgood', 7]
+
+
+
+    // let newNums = numbers.slice(2,5)
+    // console.log(newNums);
+
+
+    // console.log(countries.join(' # '));
+
+    // let lastIndex = 13
+
+    // numbers.splice(0, 13  , 'hey' , 'sup', 'whatsgood')
+    // console.log(numbers);
+
+    // let classes = ['js1', 'js2', 'js3', 'ss1']
+    // classes.splice(4, 0, 'ss2')
+    // classes.splice(0, 3)
+    // console.log(classes);
+
+
+    // let arrayF = []
+    // function papjskd() {
+    //  let input = document.getElementById('input')
+    //  let inputValue = input.value
+
+    //     arrayF.push(document.getElementById('input').value)
+    //     console.log(arrayF);
+
+    // }
+
+
+    function generateColors(type, i) {
+        let arr = []
+        if (type == 'hexa') {
+
+            for (let index = 0; index < i; index++) {
+                let hexa = '#'
+                let picks = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f']
+
+                for (let index = 0; index < 6; index++) {
+                    let random = Math.floor(Math.random() * picks.length)
+                    hexa += picks[random]
+                }
+
+                arr.push(hexa)
+            }
+            return arr
+        } else if (type == 'rgb') {
+            for (let index = 0; index < i; index++) {
+                let first = Math.floor(Math.random() * 256)
+                let sec = Math.floor(Math.random() * 256)
+                let third = Math.floor(Math.random() * 256)
+                let rgb = rgb(`${first},${sec},${third}`)
+
+                arr.push(rgb)
+            }
+            return arr
+        } else {
+            return `${type} is not a valid color type`
+        }
+
+
+
+    }
+
+    console.log(generateColors('hexa', 4));
+    console.log(generateColors('rgb', 6));
+    console.log(generateColors('lol', 4));
+
+    document.body.style.backgroundColor = 'white'
+
+    function changeBackground() {
+        document.body.style.backgroundColor === 'white' ? document.body.style.backgroundColor = 'black' : document.body.style.backgroundColor = 'white'
+    }
+
+
+    function generateColors() {
+        function randomNum() {
+            return Math.ceil(Math.random() * 255)
+        }
+
+        return `rgb(${randomNum()} , ${randomNum()} , ${randomNum()})`
+    }
+
+
+
+
+    function generateHexa() {
+        let hexa = ''
+        let arr = ['a', 'b', 'c', 'd', 'e', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+        for (let index = 0; index < 6; index++) {
+            let picker = Math.floor(Math.random() * arr.length)
+            hexa += arr[picker]
+
+        }
+
+        return `#${hexa}`
+
+    }
+
+
+
+
+    function chooseColorType(colorType) {
+        if (colorType === 'hexa') {
+            return generateHexa()
+        } else if (colorType === 'rgb') {
+            return generateColors()
+        } else {
+            return 'invalid argument'
+        }
+    }
+
+    console.log(chooseColorType('hexa'));
+    console.log(chooseColorType('rgb'));
+
+
+
+
+    setInterval(() => {
+        document.body.style.backgroundColor = chooseColorType('hexa')
+    }, 5000);
+
+
+
+    let ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+    ages = ages.sort()
+    console.log(ages);
+    let min = ages[0]
+    let max = ages[ages.length - 1]
+    console.log(min);
+    console.log(max);
+    let range = max - min
+    console.log(range);
+
+    const products = [
+        { product: 'banana', price: 3 },
+        { product: 'mango', price: 6 },
+        { product: 'potato', price: ' ' },
+        { product: 'avocado', price: 8 },
+        { product: 'coffee', price: 10 },
+        { product: 'tea', price: '' },
+    ]
+
+    let totalPrice = products.filter(({ product, price }) => typeof price === "number").reduce((a, { product, price }) => { return a + price }, 0)
+    console.log(totalPrice);
+
+
+
+
+    function generateColor(color, amount) {
+        let hexaColors = []
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 'a', 'b', 'c', 'd', 'e', 'f']
+
+        for (let index = 0; index < amount; index++) {
+            let hexa = '#'
+            for (let index = 0; index < 6; index++) {
+                let randomNum = Math.floor(Math.random() * 16)
+                hexa += arr[randomNum]
+            }
+
+            hexaColors.push(hexa)
+
+        }
+
+        return hexaColors
+
+
+
+
+    }
+
+    console.log(generateColor('hexa', 8));
+
+    // let a = 2
+    // a = a + 3
+
+    function sumArrValues(array) {
+
+        let sum = 0
+        for (let index = 0; index < array.length; index++) {
+            sum = sum + array[index]
+        }
+        return sum
+    }
+
+    let ans = sumArrValues([2, 34, 567, 89]) + sumArrValues([2, 3])
+    console.log(ans);
+    // ans = 692 + 5
+
+
+
+    //  "rgb(23,45,34)"
+
+    function rgbColorGenerator() {
+        let r = Math.floor(Math.random() * 256)
+        let g = Math.floor(Math.random() * 256)
+        let b = Math.floor(Math.random() * 256)
+
+        return `rgb(${r},${g},${b})`
+    }
+
+    console.log(rgbColorGenerator());
+
+    let myBackground = document.getElementById('protip')
+    myBackground.style.color = rgbColorGenerator()
+
+    function generateColor(params) {
+
+    }
+
+    generateColor()
+    generateColor('rgb')
+    generateColor('hexa')
+
+</script>

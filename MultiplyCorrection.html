@@ -17,6 +17,8 @@
 
 </html>
 <script>
+
+
     function checkMultiply() {
         console.log('Hello');
 
@@ -33,40 +35,18 @@
         } else {
             console.log(+text)
             console.log(+text2)
-            //-
-            // text = 3
-            // text2 = 5
             output.innerHTML = ''
-
-            if (+text2 > +text) {
-                loopMultiply('<', '++')
-                // for (let int = +text; int <= +text2; int++) {
-                    //     console.log(int);
-                    //     output.innerHTML += `<h6>${int} Times Multiplication Table</h6>`
-                    //     for (let index = 1; index <= 12; index++) {
-                        //         console.log(`${int} * ${index} = ${+int * index}`);
-                        //         output.innerHTML += `<span>${int} * ${index} = ${+int * index}</span><br>`
-                        //     }
-                        // }
-                    } else {
-                loopMultiply('>', '--')
-                // for (let int = +text; int >= +text2; int--) {
-                //     console.log(int);
-                //     output.innerHTML += `<h6>${int} Times Multiplication Table</h6>`
-                //     for (let index = 1; index <= 12; index++) {
-                //         console.log(`${int} * ${index} = ${+int * index}`);
-                //         output.innerHTML += `<span>${int} * ${index} = ${+int * index}</span><br>`
-                //     }
-                // }
-            }
+            loopMultiply(text, text2)
         }
     }
 
-    function loopMultiply(params, params2) {
-        console.log(params);
-        console.log(params2);
+    function loopMultiply(text, text2) {
+        console.log(text);
+        console.log(text2);
+        
+        let direction = +text > +text2 
 
-        for (let int = +text; params === '<' ? int <= +text2 : int >= +text2; params2 === "++" ? int++ : int-- ) {
+        for (let int = +text; direction ? int >= +text2 : int <= +text2; direction ? int-- : int++) {
             console.log(int);
             output.innerHTML += `<h6>${int} Times Multiplication Table</h6>`
             for (let index = 1; index <= 12; index++) {
@@ -77,5 +57,7 @@
     }
 
 
+    // int++
+    // int + 1
 
 </script>

@@ -110,9 +110,11 @@
     anonymousFunction();
 
     // Self Invoking Function Expression
-    (function () {
+    (function sayYourName() {
         console.log('I am an SIFE function');
     })();
+
+    // sayYourName()
 
 
     // Arrow Function
@@ -136,8 +138,6 @@
     console.log(arr.join('+'));
 
     console.log(eval(arr.join('+')));
-
-
 
 
     function reverseArr(params) {
@@ -180,6 +180,64 @@
         console.log(coppiedArr);
     }
     showAllNum(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 10, 13, 15, 13, 4, 5, 6)
+
+    // Function Returning a value
+    function returnVal() {
+        let a = 4
+        let b = 5
+        let ans = a + b
+
+        let firstName = 'Evans'
+        return ans
+        console.log(ans);
+    }
+
+    console.log(returnVal());
+
+
+
+
+    let username = 'Evans'
+    let password = '123'
+    let confPassword = '123'
+
+    function signIn() {
+        if (username === "" || password === '' || confPassword === '') {
+            alert('All fields are mandatory')
+            return
+        }
+
+        if (password !== confPassword) {
+            alert('password doesnt match')
+            return
+        }
+        alert('Sign Up successful')
+    }
+
+
+    let nameArr = ['Adedeji', 'Adedotun', ['ReactJS', 'React Native', 'Javascript', 'Typescript', 'NextJS']]
+    let nameArr2 = ['Dev', 'Evans', ['HTML', 'CSS', 'Javascript', 'React JS']]
+
+    function sayFullName(params) {
+        return `My Full Name is ${params[0]} ${params[1]} and i have these skills ${params[2].slice(0, params[2].length - 1).join(', ')} and ${params[2][params[2].length - 1]}`
+    }
+
+    console.log(sayFullName(nameArr));
+    console.log(sayFullName(nameArr2));
+    
+    // Callback Functions
+    function sayMyName(params) {
+        console.log(params);
+    }
+    sayMyName(true)
+
+    function buyCoffee(coffeIsDone) {
+        callMyNumber()
+    }
+    buyCoffee(function () {
+        console.log('Your Coffee is done! Calling Customer...');
+    })
+
 
 
 
