@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        .mainShow {
+            width: 100dvw;
+            height: 100dvh;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="mainShow d-flex justify-content-center align-items-center">
+        <main class="rounded shadow m-auto p-4 w-50">
+            <h1 class="fw-bolder text-center">To Do App</h1>
+            <input type="text" class="form-control my-4" id="todoInput">
+            <button class="btn btn-success w-100 py-2" onclick="addReminder()">Add Remainder</button>
+            <div class="showOutput mt-4 w-100"></div>
+        </main>
+    </section>
+</body>
+
+</html>
+<script>
+    let todoDatabase = []
+
+    function displayTodo() {
+        let showOutput = document.querySelector('.showOutput')
+        showOutput.innerHTML = ''
+        for (let i = 0; i < todoDatabase.length; i++) {
+            const element = todoDatabase[i];
+            showOutput.innerHTML += `
+            <div class="d-flex justify-content-between align-items-center mt-2">
+                <h4>${i + 1}</h4>
+                <h4>${element}</h4>
+                <div class="d-flex justify-content-center align-items-center">
+                    <button onclick='editTask(${i})' class="btn btn-success">Edit</button>
+                    <button onclick='deleteTask(${i})' class="btn btn-danger ms-2">Delete</button>
+                </div>
+            </div>
+            `
+        }
+    }
+    function addReminder() {
+        // todoInput = 'Hello'
+        let todoInput = document.querySelector('#todoInput')
+
+        console.log(todoInput.value.trim());
+        if (!todoInput.value.trim()) {
+            alert('All fields are mandatory')
+            return
+        }
+        todoDatabase.push(todoInput.value.trim())
+        console.log(todoDatabase);
+        todoInput.value = ''
+
+        // todoInput.value.trim = 'Hello'
+        // todoDatabase = ['Hello']
+        // todoDatabase = ['Hello', 'How are you doing?']
+        displayTodo()
+    }
+
+    function deleteTask(index) {
+        console.log(index);
+        let confirmPrompt = confirm('Are you sure you want to delete this task?')
+        if (confirmPrompt) {
+            todoDatabase.splice(index, 1)
+            console.log(todoDatabase);
+            displayTodo()
+        }
+    }
+
+    function editTask(index) {  
+        let promptValue = prompt('What do you want to edit your task to be?', todoDatabase[index])
+        if (!promptValue || promptValue === todoDatabase[index]) {
+            alert('Please make a change to your task and try again')
+            return
+        }
+        todoDatabase[index] = promptValue   
+        displayTodo()        
+    }
+
+</script>
